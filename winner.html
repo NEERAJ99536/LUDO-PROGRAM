@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #dff9fb;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        ol {
+            font-size: 20px;
+            color: #34495e;
+        }
+        ol li {
+            margin: 10px 0;
+        }
+        .winner-board {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Game Over!</h1>
+
+    <div class="winner-board">
+        <h2>Final Rankings</h2>
+        <ol>
+            {% for player, score in ranked_players %}
+            <li>{{ player }}: {{ score }} points</li>
+            {% endfor %}
+        </ol>
+    </div>
+
+</body>
+</html>
